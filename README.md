@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Bookmark Landing Page solution](https://your-solution-url.com)
+- Solution URL: [Bookmark Landing Page solution](https://www.frontendmentor.io/solutions/bookmark-landing-page-tailwindcss-Wmd-Sjfa3d)
 - Live Site URL: [Bookmark Landing Page Live Site](https://mjspitta.github.io/bookmark-landing-page/)
 
 ## My process
