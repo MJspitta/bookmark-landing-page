@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
@@ -78,23 +78,23 @@
         <p>Our aim is to make it quick and easy for you to access your favourite websites. Your bookmarks sync between your devices so you can access them on the go.</p>
       </div>
       <div class="mt-8">
-        <div class="mb-16 sm:w-[50%] sm:mx-auto sm:flex sm:justify-around sm:border-b-[1px] sm:border-b-gray-400">
+        <div id="features" class="mb-16 sm:w-[50%] sm:mx-auto sm:flex sm:justify-around sm:border-b-[1px] sm:border-b-gray-400">
           <hr class="sm:hidden">
-          <button type="button" class="selected py-2 text-para text-blue-950 hover:text-red-400 hover:cursor-pointer">Simple Bookmarking</button>
+          <button type="button" class="py-2 text-para hover:text-red-400 hover:cursor-pointer selected">Simple Bookmarking</button>
           <hr class="sm:hidden">
-          <button type="button" class="py-2 text-para text-gray-400 hover:text-red-400 hover:cursor-pointer">Speedy Searching</button>
+          <button type="button" class="py-2 text-para hover:text-red-400 hover:cursor-pointer">Speedy Searching</button>
           <hr class="sm:hidden">
-          <button type="button" class="py-2 text-para text-gray-400 hover:text-red-400 hover:cursor-pointer">Easy Sharing</button>
+          <button type="button" class="py-2 text-para hover:text-red-400 hover:cursor-pointer">Easy Sharing</button>
           <hr class="sm:hidden">
         </div>
         <div class="sm:flex sm:justify-between">
           <div class="relative h-fit my-16 sm:mt-0 pb-8 px-6 sm:px-0 sm:pl-32 sm:w-[50%]">
-            <img src="./images/illustration-features-tab-1.svg" alt="feature illustration">
-            <div class="absolute bg-blue-600 w-[80%] h-[80%] left-0 bottom-0 rounded-r-[40%] -z-10"></div>
+            <img id="feature-img" src="./images/illustration-features-tab-1.svg" alt="feature illustration">
+            <div class="absolute bg-blue-600 w-[70%] h-[80%] left-0 bottom-0 rounded-r-[40%] -z-10"></div>
           </div>
           <div class="px-6 sm:w-[50%] sm:flex sm:flex-col sm:items-start sm:gap-8 sm:text-left sm:pl-32 sm:pr-28 sm:pt-10">
-            <h2 class="text-2xl sm:text-3xl mb-4 sm:mb-0">Bookmark in one click</h2>
-            <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
+            <h2 id="feature-heading" class="text-2xl sm:text-3xl mb-4 sm:mb-0">Bookmark in one click</h2>
+            <p id="feature-paragraph">Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
             <button type="button" class="hidden sm:block text-gray-50 hover:text-blue-600 text-[0.8rem] font-medium bg-blue-600 hover:bg-gray-50 px-4 py-3 rounded-[0.5rem] hover:border-[1px] hover:border-solid hover:border-blue-600 hover:cursor-pointer">More Info</button>
           </div>
         </div>
@@ -143,32 +143,32 @@
       <div class="mt-12 sm:w-[40%] sm:mx-auto">
         <div class="px-6 mb-12">
           <div class="mb-2 py-4 border-b-1 border-b-gray-400">
-            <div class="group flex justify-between items-center hover:cursor-pointer">
+            <div class="question group flex justify-between items-center hover:cursor-pointer">
               <h4 class="group-hover:text-red-400">What is Bookmark?</h4>
               <img src="./images/icon-arrow.svg" alt="arrow icon">
             </div>
-            <p class="answer" hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
+            <p class="answer hide-answer text-left py-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
           </div>
           <div class="mb-2 py-4 border-b-1 border-b-gray-400">
-            <div class="group flex justify-between items-center hover:cursor-pointer">
+            <div class="question group flex justify-between items-center hover:cursor-pointer">
               <h4 class="group-hover:text-red-400">How can I request a new browser?</h4>
               <img src="./images/icon-arrow.svg" alt="arrow icon">
             </div>
-            <p class="answer" hidden>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
+            <p class="answer hide-answer text-left py-4">Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
           </div>
           <div class="mb-2 py-4 border-b-1 border-b-gray-400">
-            <div class="group flex justify-between items-center hover:cursor-pointer">
+            <div class="question group flex justify-between items-center hover:cursor-pointer">
               <h4 class="group-hover:text-red-400">Is there a mobile app?</h4>
               <img src="./images/icon-arrow.svg" alt="arrow icon">
             </div>
-            <p class="answer" hidden>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.</p>
+            <p class="answer hide-answer text-left py-4">Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.</p>
           </div>
           <div class="mb-2 py-4 border-b-1 border-b-gray-400">
-            <div class="group flex justify-between items-center hover:cursor-pointer">
+            <div class="question group flex justify-between items-center hover:cursor-pointer">
               <h4 class="group-hover:text-red-400">What about other Chromium browsers?</h4>
               <img src="./images/icon-arrow.svg" alt="arrow icon">
             </div>
-            <p class="answer" hidden>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.</p>
+            <p class="answer hide-answer text-left py-4">Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.</p>
           </div>
         </div>
         <button type="button" class="bg-blue-600 hover:bg-gray-50 text-gray-50 hover:text-blue-600 px-6 py-3 rounded-[0.5rem] hover:border-[1px] hover:border-solid hover:border-blue-600 hover:cursor-pointer">More Info</button>
@@ -224,5 +224,6 @@
   link that you can send at the click of a button. 
   -->
 
+  <script src="./scripts/script.js"></script>
 </body>
 </html>

@@ -40,7 +40,15 @@
 }
 
 @layer components {
-  .selected {
+  #features button {
+    color: var(--color-gray-400);
+  }
+  #features button.selected {
+    color: hsl(229, 31%, 21%);
     border-bottom: 4px solid var(--color-red-400);
+  }
+
+  .hide-answer {
+    display: none;
   }
 }
