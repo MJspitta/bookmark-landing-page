@@ -1,3 +1,17 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const dialog = document.querySelector('dialog');
+  const hamburgerIcon = document.getElementById('hamburger-menu');
+  const closeIcon = document.getElementById('close-menu');
+
+  hamburgerIcon.addEventListener('click', () => {
+    dialog.showModal();
+  });
+
+  closeIcon.addEventListener('click', () => {
+    dialog.close();
+  });
+})
+
 const questions = document.querySelectorAll('.question');
 const answers = document.querySelectorAll('.answer');
 
@@ -9,21 +23,21 @@ for (let i = 0; i < questions.length; i++) {
 
 const features = [
   {
-    name : "Bookmark in one click",
-    paragraph : "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.",
-    heading : "Simple Bookmarking",
+    name: "Bookmark in one click",
+    paragraph: "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.",
+    heading: "Simple Bookmarking",
     imageSrc: "./images/illustration-features-tab-1.svg"
   },
   {
-    name : "Intelligent search",
-    paragraph : "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
-    heading : "Speedy Searching",
+    name: "Intelligent search",
+    paragraph: "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
+    heading: "Speedy Searching",
     imageSrc: "./images/illustration-features-tab-2.svg"
   },
   {
-    name : "Share your bookmarks",
-    paragraph : "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
-    heading : "Easy Sharing",
+    name: "Share your bookmarks",
+    paragraph: "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
+    heading: "Easy Sharing",
     imageSrc: "./images/illustration-features-tab-3.svg"
   }
 ];
@@ -44,7 +58,7 @@ const setFeatures = () => {
 };
 
 const clearSelected = () => {
-  for(let i = 0; i < btnFeatures.length; i++) {
+  for (let i = 0; i < btnFeatures.length; i++) {
     btnFeatures[i].classList.remove('selected');
   }
 };
@@ -52,7 +66,7 @@ const clearSelected = () => {
 setFeatures();
 
 
-for(let i = 0; i < btnFeatures.length; i++) {
+for (let i = 0; i < btnFeatures.length; i++) {
   btnFeatures[i].addEventListener("click", () => {
 
     clearSelected();

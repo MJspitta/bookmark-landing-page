@@ -17,21 +17,23 @@
 
 <body>
   <dialog>
-    <div class="dialog-top">
-      <div>
+    <div class="flex flex-col">
+      <div class="flex justify-between items-center">
         <img src="./images/logo-bookmark-white.svg" alt="bookmark white logo">
-        <img src="./images/icon-close.svg" alt="close icon">
+        <button type="button" id="close-menu" class="border-0">
+          <img src="./images/icon-close.svg" alt="close icon">
+        </button>
       </div>
-      <div>
-        <ul>
-          <li>Features</li>
-          <li>Pricing</li>
-          <li>Contact</li>
+      <div class="text-gray-50 text-center mt-8">
+        <ul class="flex flex-col uppercase tracking-[0.3rem]">
+          <li class="border-t border-t-gray-600 py-4">Features</li>
+          <li class="border-t border-t-gray-600 border-b border-b-gray-600 py-4">Pricing</li>
+          <li class="border-b border-b-gray-600 py-4">Contact</li>
         </ul>
       </div>
-      <button type="button">Login</button>
+      <button type="button" class="py-4 text-gray-50 border mt-8 uppercase tracking-[0.3rem]">Login</button>
     </div>
-    <div class="dialog-bottom">
+    <div class="flex justify-center items-center gap-8">
       <img src="./images/icon-facebook.svg" alt="facebook icon">
       <img src="./images/icon-twitter.svg" alt="twitter icon">
     </div>
@@ -49,7 +51,7 @@
           <a href="#"><li class="bg-red-400 hover:bg-gray-50 text-gray-50 hover:text-red-400 hover:border-[1px] hover:border-solid hover:border-red-400 px-6 py-2 rounded-[0.5rem]">Login</li></a>
         </ul>
       </div>
-      <div class="sm:hidden">
+      <div id="hamburger-menu" class="sm:hidden">
         <img src="./images/icon-hamburger.svg" alt="hamburger icon">
       </div>
     </nav>

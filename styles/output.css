@@ -14,6 +14,7 @@
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
+    --color-gray-600: oklch(44.6% 0.03 256.802);
     --spacing: 0.25rem;
     --text-xs: 0.75rem;
     --text-xs--line-height: calc(1 / 0.75);
@@ -204,6 +205,9 @@
   .-z-10 {
     z-index: calc(10 * -1);
   }
+  .z-20 {
+    z-index: 20;
+  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -326,12 +330,34 @@
     border-top-right-radius: 40%;
     border-bottom-right-radius: 40%;
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-0 {
+    border-style: var(--tw-border-style);
+    border-width: 0px;
+  }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
   .border-b-1 {
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .border-t-gray-600 {
+    border-top-color: var(--color-gray-600);
+  }
   .border-b-gray-400 {
     border-bottom-color: var(--color-gray-400);
+  }
+  .border-b-gray-600 {
+    border-bottom-color: var(--color-gray-600);
   }
   .bg-blue-600 {
     background-color: var(--color-blue-600);
@@ -820,6 +846,28 @@
   }
   .hide-answer {
     display: none;
+  }
+  dialog {
+    display: none;
+  }
+  dialog[open] {
+    background-color: var(--color-blue-950);
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    margin: 0;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    justify-content: space-between;
+    border: none;
+    z-index: 1000;
+  }
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.7);
   }
 }
 @property --tw-rotate-x {
