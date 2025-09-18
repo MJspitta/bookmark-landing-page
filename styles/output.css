@@ -11,7 +11,6 @@
     --color-blue-600: hsl(231, 69%, 60%);
     --color-blue-950: hsl(229, 31%, 21%);
     --color-gray-50: hsl(0, 0%, 97%);
-    --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -24,15 +23,10 @@
     --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
-    --text-4xl: 2.25rem;
-    --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
-    --text-6xl: 3.75rem;
-    --text-6xl--line-height: 1;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
-    --tracking-wide: 0.025em;
     --tracking-widest: 0.1em;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -189,6 +183,9 @@
   }
 }
 @layer utilities {
+  .invisible {
+    visibility: hidden;
+  }
   .absolute {
     position: absolute;
   }
@@ -477,6 +474,208 @@
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+  .group-hover\:cursor-pointer {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        cursor: pointer;
+      }
+    }
+  }
+  .group-hover\:border-\[1px\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        border-style: var(--tw-border-style);
+        border-width: 1px;
+      }
+    }
+  }
+  .group-hover\:border-\[3px\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        border-style: var(--tw-border-style);
+        border-width: 3px;
+      }
+    }
+  }
+  .group-hover\:border-b-\[3px\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        border-bottom-style: var(--tw-border-style);
+        border-bottom-width: 3px;
+      }
+    }
+  }
+  .group-hover\:border-solid {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-border-style: solid;
+        border-style: solid;
+      }
+    }
+  }
+  .group-hover\:border-red-400 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        border-color: var(--color-red-400);
+      }
+    }
+  }
+  .group-hover\:border-b-red-400 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        border-bottom-color: var(--color-red-400);
+      }
+    }
+  }
+  .group-hover\:bg-red-400 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        background-color: var(--color-red-400);
+      }
+    }
+  }
+  .group-hover\:fill-red-400 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        fill: var(--color-red-400);
+      }
+    }
+  }
+  .group-hover\:p-2 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        padding: calc(var(--spacing) * 2);
+      }
+    }
+  }
+  .group-hover\:text-red-400 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-red-400);
+      }
+    }
+  }
+  .peer-invalid\:visible {
+    &:is(:where(.peer):invalid ~ *) {
+      visibility: visible;
+    }
+  }
+  .peer-invalid\:block {
+    &:is(:where(.peer):invalid ~ *) {
+      display: block;
+    }
+  }
+  .placeholder\:text-gray-400 {
+    &::placeholder {
+      color: var(--color-gray-400);
+    }
+  }
+  .after\:content-\[\'Whoops\'\] {
+    &::after {
+      content: var(--tw-content);
+      --tw-content: 'Whoops';
+      content: var(--tw-content);
+    }
+  }
+  .invalid\:text-red-400 {
+    &:invalid {
+      color: var(--color-red-400);
+    }
+  }
+  .invalid\:outline-red-400 {
+    &:invalid {
+      outline-color: var(--color-red-400);
+    }
+  }
+  .invalid\:after\:content-\[\'Whoops\'\] {
+    &:invalid {
+      &::after {
+        content: var(--tw-content);
+        --tw-content: 'Whoops';
+        content: var(--tw-content);
+      }
+    }
+  }
+  .hover\:cursor-pointer {
+    &:hover {
+      @media (hover: hover) {
+        cursor: pointer;
+      }
+    }
+  }
+  .hover\:border-\[1px\] {
+    &:hover {
+      @media (hover: hover) {
+        border-style: var(--tw-border-style);
+        border-width: 1px;
+      }
+    }
+  }
+  .hover\:border-x {
+    &:hover {
+      @media (hover: hover) {
+        border-inline-style: var(--tw-border-style);
+        border-inline-width: 1px;
+      }
+    }
+  }
+  .hover\:border-solid {
+    &:hover {
+      @media (hover: hover) {
+        --tw-border-style: solid;
+        border-style: solid;
+      }
+    }
+  }
+  .hover\:border-blue-600 {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-blue-600);
+      }
+    }
+  }
+  .hover\:border-blue-950 {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-blue-950);
+      }
+    }
+  }
+  .hover\:border-red-400 {
+    &:hover {
+      @media (hover: hover) {
+        border-color: var(--color-red-400);
+      }
+    }
+  }
+  .hover\:bg-gray-50 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-gray-50);
+      }
+    }
+  }
+  .hover\:text-blue-600 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-blue-600);
+      }
+    }
+  }
+  .hover\:text-red-400 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-red-400);
+      }
+    }
+  }
+  .invalid\:focus\:outline-red-400 {
+    &:invalid {
+      &:focus {
+        outline-color: var(--color-red-400);
+      }
+    }
+  }
   .sm\:relative {
     @media (width >= 40rem) {
       position: relative;
@@ -490,11 +689,6 @@
   .sm\:top-24 {
     @media (width >= 40rem) {
       top: calc(var(--spacing) * 24);
-    }
-  }
-  .sm\:right-0 {
-    @media (width >= 40rem) {
-      right: calc(var(--spacing) * 0);
     }
   }
   .sm\:mx-auto {
@@ -537,11 +731,6 @@
       display: none;
     }
   }
-  .sm\:inline-block {
-    @media (width >= 40rem) {
-      display: inline-block;
-    }
-  }
   .sm\:h-full {
     @media (width >= 40rem) {
       height: 100%;
@@ -562,11 +751,6 @@
       width: 50%;
     }
   }
-  .sm\:w-\[60\%\] {
-    @media (width >= 40rem) {
-      width: 60%;
-    }
-  }
   .sm\:w-\[70\%\] {
     @media (width >= 40rem) {
       width: 70%;
@@ -575,11 +759,6 @@
   .sm\:flex-1 {
     @media (width >= 40rem) {
       flex: 1;
-    }
-  }
-  .sm\:flex-none {
-    @media (width >= 40rem) {
-      flex: none;
     }
   }
   .sm\:flex-col {
@@ -642,22 +821,6 @@
       gap: calc(var(--spacing) * 12);
     }
   }
-  .sm\:justify-self-end {
-    @media (width >= 40rem) {
-      justify-self: flex-end;
-    }
-  }
-  .sm\:justify-self-start {
-    @media (width >= 40rem) {
-      justify-self: flex-start;
-    }
-  }
-  .sm\:border-b-2 {
-    @media (width >= 40rem) {
-      border-bottom-style: var(--tw-border-style);
-      border-bottom-width: 2px;
-    }
-  }
   .sm\:border-b-\[1px\] {
     @media (width >= 40rem) {
       border-bottom-style: var(--tw-border-style);
@@ -684,11 +847,6 @@
       padding-inline: 10%;
     }
   }
-  .sm\:py-2 {
-    @media (width >= 40rem) {
-      padding-block: calc(var(--spacing) * 2);
-    }
-  }
   .sm\:py-3 {
     @media (width >= 40rem) {
       padding-block: calc(var(--spacing) * 3);
@@ -697,11 +855,6 @@
   .sm\:pt-10 {
     @media (width >= 40rem) {
       padding-top: calc(var(--spacing) * 10);
-    }
-  }
-  .sm\:pt-16 {
-    @media (width >= 40rem) {
-      padding-top: calc(var(--spacing) * 16);
     }
   }
   .sm\:pr-24 {
@@ -714,24 +867,9 @@
       padding-right: calc(var(--spacing) * 28);
     }
   }
-  .sm\:pr-32 {
-    @media (width >= 40rem) {
-      padding-right: calc(var(--spacing) * 32);
-    }
-  }
   .sm\:pb-24 {
     @media (width >= 40rem) {
       padding-bottom: calc(var(--spacing) * 24);
-    }
-  }
-  .sm\:pl-12 {
-    @media (width >= 40rem) {
-      padding-left: calc(var(--spacing) * 12);
-    }
-  }
-  .sm\:pl-16 {
-    @media (width >= 40rem) {
-      padding-left: calc(var(--spacing) * 16);
     }
   }
   .sm\:pl-32 {
@@ -947,6 +1085,11 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-content {
+  syntax: "*";
+  initial-value: "";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -987,6 +1130,7 @@
       --tw-drop-shadow-color: initial;
       --tw-drop-shadow-alpha: 100%;
       --tw-drop-shadow-size: initial;
+      --tw-content: "";
     }
   }
 }

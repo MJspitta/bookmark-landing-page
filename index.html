@@ -16,7 +16,26 @@
 </head>
 
 <body>
-
+  <dialog>
+    <div class="dialog-top">
+      <div>
+        <img src="./images/logo-bookmark-white.svg" alt="bookmark white logo">
+        <img src="./images/icon-close.svg" alt="close icon">
+      </div>
+      <div>
+        <ul>
+          <li>Features</li>
+          <li>Pricing</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+      <button type="button">Login</button>
+    </div>
+    <div class="dialog-bottom">
+      <img src="./images/icon-facebook.svg" alt="facebook icon">
+      <img src="./images/icon-twitter.svg" alt="twitter icon">
+    </div>
+  </dialog>
   <header class="sm:h-full">
     <nav class="px-6 sm:px-30 pt-12 flex justify-between items-center">
       <div>
@@ -24,10 +43,10 @@
       </div>
       <div class="hidden sm:block">
         <ul class="flex gap-6 items-center uppercase text-[0.8rem] font-medium">
-          <li class="text-gray-500">Features</li>
-          <li class="text-gray-500">Pricing</li>
-          <li class="text-gray-500">Contact</li>
-          <li class="bg-red-400 text-gray-50 px-6 py-2 rounded-[0.5rem]">Login</li>
+          <a href="#"><li class="text-gray-500 hover:text-red-400">Features</li></a>
+          <a href="#"><li class="text-gray-500 hover:text-red-400">Pricing</li></a>
+          <a href="#"><li class="text-gray-500 hover:text-red-400">Contact</li></a>
+          <a href="#"><li class="bg-red-400 hover:bg-gray-50 text-gray-50 hover:text-red-400 hover:border-[1px] hover:border-solid hover:border-red-400 px-6 py-2 rounded-[0.5rem]">Login</li></a>
         </ul>
       </div>
       <div class="sm:hidden">
@@ -40,8 +59,8 @@
         <h1 class="px-6 sm:px-0 text-3xl sm:text-5xl leading-10 sm:leading-14">A Simple Bookmark Manager</h1>
         <p class="px-6 sm:px-0 leading-6 my-6 sm:my-10">A clean and simple interface to organize your favourite websites. Open a new browser tab and see your sites load instantly. Try it for free.</p>
         <div class="flex gap-2 sm:gap-4 justify-center sm:justify-start">
-          <button type="button" class="text-gray-50 text-[0.8rem] font-medium bg-blue-600 px-4 py-3 rounded-[0.5rem]">Get it on Chrome</button>
-          <button type="button" class="text-blue-950 text-[0.8rem] font-medium bg-gray-50 px-4 py-3 rounded-[0.5rem] shadow-xl">Get it on Firefox</button>
+          <button type="button" class="text-gray-50 hover:text-blue-600 text-[0.8rem] font-medium bg-blue-600 hover:bg-gray-50 px-4 py-3 rounded-[0.5rem] hover:border-[1px] hover:border-solid hover:border-blue-600 hover:cursor-pointer">Get it on Chrome</button>
+          <button type="button" class="text-blue-950 text-[0.8rem] font-medium bg-gray-50 px-4 py-3 rounded-[0.5rem] shadow-xl hover:border-[1px] hover:border-solid hover:border-blue-950 hover:cursor-pointer">Get it on Firefox</button>
         </div>
       </div>
       <div class="relative h-fit sm:h-full sm:w-[40%] my-16 sm:pr-24">
@@ -61,11 +80,11 @@
       <div class="mt-8">
         <div class="mb-16 sm:w-[50%] sm:mx-auto sm:flex sm:justify-around sm:border-b-[1px] sm:border-b-gray-400">
           <hr class="sm:hidden">
-          <button type="button" class="selected py-2 text-para text-blue-950">Simple Bookmarking</button>
+          <button type="button" class="selected py-2 text-para text-blue-950 hover:text-red-400 hover:cursor-pointer">Simple Bookmarking</button>
           <hr class="sm:hidden">
-          <button type="button" class="selected py-2 text-para text-gray-400">Speedy Searching</button>
+          <button type="button" class="py-2 text-para text-gray-400 hover:text-red-400 hover:cursor-pointer">Speedy Searching</button>
           <hr class="sm:hidden">
-          <button type="button" class="py-2 text-para text-gray-400">Easy Sharing</button>
+          <button type="button" class="py-2 text-para text-gray-400 hover:text-red-400 hover:cursor-pointer">Easy Sharing</button>
           <hr class="sm:hidden">
         </div>
         <div class="sm:flex sm:justify-between">
@@ -76,7 +95,7 @@
           <div class="px-6 sm:w-[50%] sm:flex sm:flex-col sm:items-start sm:gap-8 sm:text-left sm:pl-32 sm:pr-28 sm:pt-10">
             <h2 class="text-2xl sm:text-3xl mb-4 sm:mb-0">Bookmark in one click</h2>
             <p>Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.</p>
-            <button type="button" class="hidden sm:block text-gray-50 text-[0.8rem] font-medium bg-blue-600 px-4 py-3 rounded-[0.5rem]">More Info</button>
+            <button type="button" class="hidden sm:block text-gray-50 hover:text-blue-600 text-[0.8rem] font-medium bg-blue-600 hover:bg-gray-50 px-4 py-3 rounded-[0.5rem] hover:border-[1px] hover:border-solid hover:border-blue-600 hover:cursor-pointer">More Info</button>
           </div>
         </div>
       </div>
@@ -95,21 +114,21 @@
             <h3 class="text-xl mb-2">Add to Chrome</h3>
             <p class="text-[1rem] mb-8">Minimum version 62</p>
             <img src="./images/bg-dots.svg" alt="dotted line" class="w-full">
-            <button type="button" class="mt-6 bg-blue-600 py-2 rounded-[0.5rem] text-gray-50 w-[80%]">Add & Install Extension</button>
+            <button type="button" class="mt-6 bg-blue-600 hover:bg-gray-50 py-2 rounded-[0.5rem] text-gray-50 hover:text-blue-600 w-[80%] hover:border-[1px] hover:border-solid hover:border-blue-600 hover:cursor-pointer">Add & Install Extension</button>
           </div>
           <div class="sm:relative sm:top-12 pt-10 pb-5 shadow-xl rounded-[0.5rem]">
             <img src="./images/logo-firefox.svg" alt="firefox logo" class="mx-auto my-10">
             <h3 class="text-xl mb-2">Add to Firefox</h3>
             <p class="text-[1rem] mb-8">Minimum version 55</p>
             <img src="./images/bg-dots.svg" alt="dotted line" class="w-full">
-            <button type="button" class="mt-6 bg-blue-600 py-2 rounded-[0.5rem] text-gray-50 w-[80%]">Add & Install Extension</button>
+            <button type="button" class="mt-6 bg-blue-600 hover:bg-gray-50 py-2 rounded-[0.5rem] text-gray-50 hover:text-blue-600 w-[80%] hover:border-[1px] hover:border-solid hover:border-blue-600 hover:cursor-pointer">Add & Install Extension</button>
           </div>
           <div class="sm:relative sm:top-24 pt-10 pb-5 shadow-xl rounded-[0.5rem]">
             <img src="./images/logo-opera.svg" alt="opera logo" class="mx-auto my-10">
             <h3 class="text-xl mb-2">Add to Opera</h3>
             <p class="text-[1rem] mb-8">Minimum version 46</p>
             <img src="./images/bg-dots.svg" alt="dotted line" class="w-full">
-            <button type="button" class="mt-6 bg-blue-600 py-2 rounded-[0.5rem] text-gray-50 w-[80%]">Add & Install Extension</button>
+            <button type="button" class="mt-6 bg-blue-600 hover:bg-gray-50 py-2 rounded-[0.5rem] text-gray-50 hover:text-blue-600 w-[80%] hover:border-[1px] hover:border-solid hover:border-blue-600 hover:cursor-pointer">Add & Install Extension</button>
           </div>
         </div>
       </div>
@@ -124,35 +143,35 @@
       <div class="mt-12 sm:w-[40%] sm:mx-auto">
         <div class="px-6 mb-12">
           <div class="mb-2 py-4 border-b-1 border-b-gray-400">
-            <div class="flex justify-between items-center">
-              <h4>What is Bookmark?</h4>
+            <div class="group flex justify-between items-center hover:cursor-pointer">
+              <h4 class="group-hover:text-red-400">What is Bookmark?</h4>
               <img src="./images/icon-arrow.svg" alt="arrow icon">
             </div>
             <p class="answer" hidden>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare mattis.</p>
           </div>
           <div class="mb-2 py-4 border-b-1 border-b-gray-400">
-            <div class="flex justify-between items-center">
-              <h4>How can I request a new browser?</h4>
+            <div class="group flex justify-between items-center hover:cursor-pointer">
+              <h4 class="group-hover:text-red-400">How can I request a new browser?</h4>
               <img src="./images/icon-arrow.svg" alt="arrow icon">
             </div>
             <p class="answer" hidden>Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.</p>
           </div>
           <div class="mb-2 py-4 border-b-1 border-b-gray-400">
-            <div class="flex justify-between items-center">
-              <h4>Is there a mobile app?</h4>
+            <div class="group flex justify-between items-center hover:cursor-pointer">
+              <h4 class="group-hover:text-red-400">Is there a mobile app?</h4>
               <img src="./images/icon-arrow.svg" alt="arrow icon">
             </div>
             <p class="answer" hidden>Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.</p>
           </div>
           <div class="mb-2 py-4 border-b-1 border-b-gray-400">
-            <div class="flex justify-between items-center">
-              <h4>What about other Chromium browsers?</h4>
+            <div class="group flex justify-between items-center hover:cursor-pointer">
+              <h4 class="group-hover:text-red-400">What about other Chromium browsers?</h4>
               <img src="./images/icon-arrow.svg" alt="arrow icon">
             </div>
             <p class="answer" hidden>Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut velit.</p>
           </div>
         </div>
-        <button type="button" class="bg-blue-600 text-gray-50 px-6 py-3 rounded-[0.5rem]">More Info</button>
+        <button type="button" class="bg-blue-600 hover:bg-gray-50 text-gray-50 hover:text-blue-600 px-6 py-3 rounded-[0.5rem] hover:border-[1px] hover:border-solid hover:border-blue-600 hover:cursor-pointer">More Info</button>
       </div>
     </section>
 
@@ -161,8 +180,8 @@
       <p class="text-gray-50 uppercase text-xs font-medium tracking-[0.3rem]">35,000+ already joined</p>
       <h2 class="text-2xl sm:text-3xl sm:w-[30%] sm:mx-auto mb-4 text-gray-50">Stay up-to-date with what we’re doing</h2>
       <form class="flex flex-col sm:flex-row sm:w-[30%] sm:mx-auto sm:justify-center items-center gap-4">
-        <input type="email" name="email" id="email" placeholder="Enter your email address" class="w-full sm:w-[70%] bg-gray-50 p-4 rounded-[0.5rem] text-xs text-gray-400">
-        <button type="button" class="w-full sm:w-[30%] font-medium text-gray-50 bg-red-400 py-4 sm:py-3 rounded-[0.5rem]">Contact Us</button>
+        <input type="email" name="email" id="email" pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$" required placeholder="Enter your email address" class="w-full sm:w-[70%] bg-gray-50 p-4 rounded-[0.5rem] text-xs placeholder:text-gray-400 invalid:text-red-400 invalid:outline-red-400">
+        <button type="submit" class="w-full sm:w-[30%] font-medium text-gray-50 hover:text-red-400 bg-red-400 hover:bg-gray-50 py-4 sm:py-3 rounded-[0.5rem] hover:border-[1px] hover:border-solid hover:border-red-400 hover:cursor-pointer">Contact Us</button>
       </form>
     </section>
   </main>
@@ -173,17 +192,17 @@
     </div>
     <div class="uppercase">
       <ul class="flex flex-col sm:flex-row gap-4 text-gray-300 items-center tracking-widest">
-        <li>Features</li>
-        <li>Pricing</li>
-        <li>Contact</li>
+        <li class="hover:cursor-pointer hover:text-red-400">Features</li>
+        <li class="hover:cursor-pointer hover:text-red-400">Pricing</li>
+        <li class="hover:cursor-pointer hover:text-red-400">Contact</li>
       </ul>
     </div>
     <div class="flex sm:flex-1 sm:justify-end gap-8 items-center justify-center">
-      <a href="#" class="social-link">
-        <img src="./images/icon-facebook.svg" alt="facebook icon">
+      <a href="#" class="social-link group">
+        <img src="./images/icon-facebook.svg" alt="facebook icon" class="group-hover:border-b-red-400 group-hover:border-b-[3px] group-hover:border-b-solid">
       </a>
-      <a href="#" class="social-link">
-        <img src="./images/icon-twitter.svg" alt="twitter icon">
+      <a href="#" class="social-link group">
+        <img src="./images/icon-twitter.svg" alt="twitter icon" class="group-hover:border-b-red-400 group-hover:border-b-[3px] group-hover:border-b-solid">
       </a>
     </div>
   </footer>
